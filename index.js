@@ -1,22 +1,16 @@
-const aluno = 'Levi'
-const notaAluno = 9.5
+    // Desafio//
+const nome = 'Manoel'
+const peso = 104
+const altura = 1.88
+const sexo = 'masculino'
 
-const aluno2 = 'Ravi'
-const notaAluno2 = 7.4
+const imc = peso / (altura * altura);
 
-const aluno3 = 'Fabi'
-const notaAluno3 = 3.5
-
-
-const media = (notaAluno + notaAluno2 + notaAluno3)/3
-
-if (media > 5) {
-    console.log(`A media foi de ${media}. parabens`)
-} else {
-    console.log('Sua media foi abaixo de 5');
+if (imc >= 30 ){
+    console.log('Manoel você está acima do peso');
+}else{
+    console.log('Manoel você não está acima do peso');
 }
-
-
 
 
 
