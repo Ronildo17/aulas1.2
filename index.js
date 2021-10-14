@@ -1,16 +1,25 @@
-const aluno = 'Levi'
-const notaAluno = 9.5
+const alunos = [
+  {
+     nome: 'Levi',
+     nota: 9.5
+  },
+  {
+    nome: 'Ravi',
+    nota: 7.5
+  },
+  {
+    nome: 'Fabi',
+    nota: 5.5
+  }
+]
 
-const aluno2 = 'Ravi'
-const notaAluno2 = 7.4
+const nomesAlunos = ['Levi , Ravi , Fabi']
 
-const aluno3 = 'Fabi'
-const notaAluno3 = 3.5
+console.log(alunos);
 
+const media = (alunos[0].nota + alunos[1].nota + alunos[2].nota)/3
 
-const media = (notaAluno + notaAluno2 + notaAluno3)/3
-
-if (media > 5) {
+if (media >5) {
     console.log(`A media foi de ${media}. parabens`)
 } else {
     console.log('Sua media foi abaixo de 5');
