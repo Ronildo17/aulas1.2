@@ -1,17 +1,21 @@
-const  usuario  =  {
-  nome : 'Diego' ,
-  empresa : {
-      nome : "Rocketseat" ,
-      cor : "roxo" ,
-      foco : "Programação" ,
-      endereco : {
-          rua : "Rua Guilherme Gembala Nº",
-          numero : 260
-      }
-  }
+//desafio 1.2b//
+
+//const  objeto  =  { 
+//  propriedade : [ 
+  //  {  nome : "C ++" ,  especialidade : "Desktop"  } , 
+   // {  nome : "JavaScript" ,  especialidade : "Web / Mobile"  } 
+ // ] 
+//} ;
+//console.log(`O usuário Carlos tem 32 anos e usa a tecnologia ${objeto.propriedade.nome} com especialidade em ${objeto.propriedade.especialidade}`);
+
+
+const  objeto  =  {
+  nome : "Jose" ,
+  idade : 47 ,
+  tecnologias :   [
+      {  nome : 'c++' ,  especialidade : 'Desktop'  } , 
+      {  nome : 'JavaScript' ,  especialidade : 'Web / Mobile'  }
+  ]
 }
 
-console . log ( `A empresa ${usuario.empresa.nome} está localizada em ${usuario.empresa.endereco.rua}${usuario.empresa.endereco.numero} e seu foco é ${usuario.empresa.foco}.` )
-
-
-
+console . log ( `O usuário ${ objeto . nome } tem ${ objeto . idade } anos e usa a tecnologia ${ objeto . tecnologias [ 0 ] . nome } com especialidade em ${ objeto . tecnologias [ 0 ] . especialidade } ` )
