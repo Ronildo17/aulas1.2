@@ -1,68 +1,36 @@
-const alunosDaTurmaA = [
+const usuarios = [
   {
-     nome: 'Levi',
-     nota: 9.5
+    nome: 'Carlos' ,
+    tecnologias: ['html', 'css']
   },
   {
-    nome: 'Ravi',
-    nota: 7.5
+    nome: 'Ronaldo',
+    tecnologias:['php','java']
   },
   {
-    nome: 'Fabi',
-    nota: 5.5
-  },
-  {
-    nome: 'Gui',
-    nota: 5
+    nome: 'Levi',
+    tecnologias:['js','css']
   }
+
 ]
+//interção do ultimo pro primeiro.
+function imprime(p) {
+  for (let index = 0; index < p.length; index++) {
+   const existeCss = checarCss(p[index])
 
-const alunosDaTurmaB = [
-  {
-     nome: 'Rage',
-     nota: 6.5
-  },
-  {
-    nome: 'Iago',
-    nota: 3.5
-  },
-  {
-    nome: 'Tatá',
-    nota: 2.5
-  },
-  {
-    nome:'Leo',
-    nota: 9.5
+   if(existeCss){
+    console.log ( `O usuário ${p[index].nome} trabalha com CSS` ) 
+   }
+
   }
-]
-
-function calculaMedia(alunos) {
-  let soma = 0;
-  for (let i = 0; i < alunos.length; i++) {
-        soma += alunos[i].nota 
-  }
-
- return soma / alunos.length
-
-}
-  
-const media1 = calculaMedia(alunosDaTurmaA)
-const media2 = calculaMedia(alunosDaTurmaB)
-
-function enviaMensagem(media , turma) {
-  if (media >5) {
-    console.log(`A media da ${turma} foi de ${media}. parabens`)
-} else {
-    console.log(`Sua media da ${turma} foi abaixo de 5`);
-}  
 }
 
-enviaMensagem(media1 , 'turmaA')
-enviaMensagem(media2 , 'turmaB')
+function checarCss(usuario) {
+   for(let i = 0; i < usuario.tecnologias.length; i++){
+     if(usuario.tecnologias[i]==="css"){
+      return true
+     }
+   }
+}
 
-
-
-
-
-
-
+imprime(usuarios)
